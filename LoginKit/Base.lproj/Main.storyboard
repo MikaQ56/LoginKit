@@ -1,24 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DVj-ba-vrk">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Login View Controller-->
+        <scene sceneID="obp-eE-ZFS">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController storyboardIdentifier="LoginController" id="uxN-rp-1Zz" customClass="LoginViewController" customModule="LoginKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wp6-4f-JzN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="38J-b1-OQf"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2WY-xk-lUs" appends="YES" id="QJw-RQ-tcd"/>
+                        </connections>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mRc-o4-fsG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2WY-xk-lUs">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="uxN-rp-1Zz" id="1Bc-JI-xwo"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="1084" y="429"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="hM5-EN-gDs">
+            <objects>
+                <viewController storyboardIdentifier="RegisterController" id="Xka-ow-Z2J" customClass="RegisterViewController" customModule="LoginKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sbs-QO-BKI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Yp8-Bw-zz3">
+                                <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Yp8-Bw-zz3" secondAttribute="height" multiplier="1:1" id="OtX-tt-12Y"/>
+                                    <constraint firstAttribute="height" constant="50" id="Tls-oa-cfh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yp8-Bw-zz3" firstAttribute="centerY" secondItem="sbs-QO-BKI" secondAttribute="centerY" id="eLQ-Va-JOH"/>
+                            <constraint firstItem="Yp8-Bw-zz3" firstAttribute="centerX" secondItem="sbs-QO-BKI" secondAttribute="centerX" id="kfZ-1p-vhe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UEs-OX-Ms1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ejU-7k-LWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2023" y="429"/>
+        </scene>
+        <!--Le Petit Matelot-->
+        <scene sceneID="5C3-aj-b1B">
+            <objects>
+                <viewController storyboardIdentifier="HomeController" id="eNJ-5q-D8U" customClass="HomeViewController" customModule="LoginKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vqw-ND-Srv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="G8N-9J-RYF">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="G8N-9J-RYF" secondAttribute="height" multiplier="1:1" id="32C-4y-4a1"/>
+                                    <constraint firstAttribute="height" constant="250" id="TMB-WR-5uM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G8N-9J-RYF" firstAttribute="centerX" secondItem="Vqw-ND-Srv" secondAttribute="centerX" id="TgG-xe-adS"/>
+                            <constraint firstItem="G8N-9J-RYF" firstAttribute="centerY" secondItem="Vqw-ND-Srv" secondAttribute="centerY" id="rcN-Fg-yK2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AuH-uu-E9L"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Le Petit Matelot" id="lpa-Mm-26G">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="reC-Jz-79z">
+                            <connections>
+                                <action selector="signout:" destination="eNJ-5q-D8U" id="CTf-d6-8Wn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfw-0E-ZyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2023.2" y="-329.68515742128938"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fgP-GA-oJg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DVj-ba-vrk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cOA-tk-EVe">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eNJ-5q-D8U" kind="relationship" relationship="rootViewController" id="cji-7R-bFY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CmP-Mt-XKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="-329.68515742128938"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="312" height="312"/>
+    </resources>
 </document>

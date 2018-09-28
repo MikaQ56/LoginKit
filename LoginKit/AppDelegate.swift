@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var loginViewController: LoginViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        /*let storyboard = UIStoryboard(name: "Main", bundle:nil)
+        var loginController = storyboard.instantiateViewController(withIdentifier: "LoginController")
+        window?.rootViewController = loginController
+        window?.makeKeyAndVisible()*/
+        FirebaseApp.configure()
         return true
     }
 
