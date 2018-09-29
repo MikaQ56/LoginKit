@@ -164,9 +164,8 @@ class LoginViewController: UIViewController {
                 print(error.localizedDescription)
                 self.signinAlert(error)
             }
+            self.navigationController?.popViewController(animated: true)
         }
-        //self.dismiss(animated: true, completion: nil)
-        navigationController?.popViewController(animated: true)
     }
     
     private func signinAlert(_ error: Error) {
